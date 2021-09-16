@@ -21,7 +21,11 @@ fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=52`)
 };
 
 const handleShowDeck = () => {
-setShowDeck(true);
+    if(showDeck === false){
+        setShowDeck(true)
+    }else{
+        setShowDeck(false)
+    }
 };
 
 useEffect(() => {
